@@ -1,0 +1,42 @@
+.box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: blue;
+  transform: rotate(240deg);
+}
+
+.circle {
+  width: 700px;
+  height: 200px;
+  position: relative;
+  background-color: red;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.person {
+  fill: blue;
+  transform-origin: center;
+}
+
+.person:hover {
+  /* fill: red; */
+  animation: move 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes move {
+  0 {
+    fill: blue;
+  }
+
+  50% {
+    fill: red;
+    transform: rotate(30deg);
+  }
+
+  100% {
+    fill: blue;
+    transform: rotate(0deg);
+  }
+}
